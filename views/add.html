@@ -1,0 +1,159 @@
+<h1>Add:</h1>
+<form action="/api/leads" method="POST">
+    <div class="form-group">
+
+        <input type="hidden" name="type" value="a">
+
+        <h4>District:</h4>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Plzeňský" value="Plzeňský">
+            <label class="form-check-label" for="Plzeňský">
+                Plzeňský
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Praha" value="Praha">
+            <label class="form-check-label" for="Praha">
+                Praha
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Karlovarský" value="Karlovarský">
+            <label class="form-check-label" for="Karlovarský">
+                Karlovarský
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Ústecký" value="Ústecký">
+            <label class="form-check-label" for="Ústecký">
+                Ústecký
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Liberecký" value="Liberecký">
+            <label class="form-check-label" for="Liberecký">
+                Liberecký
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Středočeský" value="Středočeský">
+            <label class="form-check-label" for="Středočeský">
+                Středočeský
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Jihočeský" value="Jihočeský">
+            <label class="form-check-label" for="Jihočeský">
+                Jihočeský
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Královohradecký" value="Královohradecký">
+            <label class="form-check-label" for="Královohradecký">
+                Královohradecký
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Pardubický" value="Pardubický">
+            <label class="form-check-label" for="Pardubický">
+                Pardubický
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Vysočina" value="Vysočina">
+            <label class="form-check-label" for="Vysočina">
+                Vysočina
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Jihomoravský" value="Jihomoravský">
+            <label class="form-check-label" for="Jihomoravský">
+                Jihomoravský
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Olomoucký" value="Olomoucký">
+            <label class="form-check-label" for="Olomoucký">
+                Olomoucký
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Zlínský" value="Zlínský">
+            <label class="form-check-label" for="Zlínský">
+                Zlínský
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="district" id="Moravskoslezký" value="Moravskoslezký">
+            <label class="form-check-label" for="Moravskoslezký">
+                Moravskoslezký
+            </label>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <h4>Property type:</h4>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="property" id="House" value="HOUSE">
+            <label class="form-check-label" for="House">
+                House
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="property" id="Flat" value="FLAT">
+            <label class="form-check-label" for="Flat">
+                Flat
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="property" id="Commercial object" value="COMMERCIAL_OBJECT">
+            <label class="form-check-label" for="Commercial object">
+                Commercial object
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="property" id="Other" value="OTHER">
+            <label class="form-check-label" for="Other">
+                Other
+            </label>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+
+        <h4>Your information:</h4>
+
+        <label for="fullName">Full name:</label>
+        <input type="text" class="form-control form-control-sm" name="fullName">
+
+        <label for="email">Email:</label>
+        <input type="text" class="form-control form-control-sm" name="email">
+
+        <label for="phone">Phone number:</label>
+        <input type="text" class="form-control form-control-sm" name="phone">
+
+    </div>
+
+    <input type="submit" value="Add" class="btn btn-dark btn-sm">
+    <a href="/" class="btn btn-danger btn-sm">Back</a>
+</form>
