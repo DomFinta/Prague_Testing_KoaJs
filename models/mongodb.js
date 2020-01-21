@@ -25,4 +25,4 @@ const PropertySchema = new Schema({
     }
 });
 
-module.exports = Property = mongoose.model('tasks', PropertySchema);
+module.exports = Property = mongoose.model('PropertySchema', PropertySchema);

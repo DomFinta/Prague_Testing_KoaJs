@@ -5,7 +5,7 @@ const path = require('path');
 const render = require('koa-ejs'); 
 const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
-const Property = require('./models/Task.js');
+const Property = require('./models/mongodb.js');
 
 const app = new Koa();
 const router = new KoaRouter();
@@ -29,6 +29,7 @@ router.get('/', index);
 router.get('/add', add);
 router.post('/api/leads', addControl);
 router.get('/api/leads', showDB);
+router.get('/api/leads/:filter', showDBByFilter);
 
 // Index
 async function index(ctx) {
@@ -44,11 +45,19 @@ async function add(ctx) {
 async function showDB(ctx) {
     await Property.find()
         .then(propertyes => {
-            ctx.body = propertyes
+            ctx.body = propertyes;
         })
         .catch(err => {
             ctx.body = 'error: ' + err;
         });
+}
+
+// Show by property type
+async function showDBByFilter(ctx) {
+    await Property.find({propertyType: ctx.params.property}, 
+    function(err, response){
+        ctx.body = response;
+    });
 }
 
 // Control adding into DB
@@ -117,7 +126,7 @@ async function addControl(ctx) {
 
     await property.save()
         .catch(err => {
-            ctx.body = 'Error: ' + err;
+            ctx.throw(400, err);
         })
 
     ctx.redirect('/');
